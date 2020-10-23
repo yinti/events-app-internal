@@ -82,6 +82,7 @@ app.post('/event', (req, res) => {
     const ev = { 
         title: req.body.title, 
         description: req.body.description,
+	loc: req.body.loc,
      }
 // this will create the Events collection if it does not exist
     firestore.collection("Events").add(ev).then(ret => {
